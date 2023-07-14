@@ -36,8 +36,8 @@ inquirer
         }
     
       const data= d3.csvParseRows(fs.readFileSync(file, 'utf8'))
-      const flatRollup = d3.flatRollup(data, v => d3.sum(v, d =>  d[2]), d => d[0], d => d[1])
-      const newCsvFile = d3.csvFormat(flatRollup);
+      const flatRollup = d3.flatRollup(data, v => d3.sum(v, d =>  d[2]).toFixed(2), d => d[0], d => d[1])
+      const newCsvFile = d3.csvFormatBody(flatRollup);
           console.log(newCsvFile);
       fs.writeFile(`${newFileLocation}/newFile.csv`, newCsvFile, (err) => {
         if (err) {
