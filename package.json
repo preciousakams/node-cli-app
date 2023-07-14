@@ -1,0 +1,21 @@
+{
+  "name": "medic-assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "csv": "./bin/index.js"
+  },
+  "author": "Precious Akams",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
+    "d3": "^7.8.5",
+    "inquirer": "^9.2.8"
+  }
+}
