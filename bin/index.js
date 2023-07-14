@@ -26,7 +26,7 @@ inquirer
       const flatRollup = d3.flatRollup(data, v => d3.sum(v, d =>  d[2]).toFixed(2), d => d[0], d => d[1])
       const newCsvFile = d3.csvFormatBody(flatRollup);
     
-      fs.writeFile(`${newFileLocation}/newFile.csv`, newCsvFile, (err) => {
+      fs.writeFile(`${newFileLocation}/newSortedFile.csv`, newCsvFile, (err) => {
         if (err) {
           throw err;
         } 
