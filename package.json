@@ -4,7 +4,7 @@
   "description": "",
   "main": "bin/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "bin": {
     "csv": "./bin/index.js"
@@ -15,5 +15,8 @@
   "dependencies": {
     "d3": "^7.8.5",
     "inquirer": "^9.2.8"
+  },
+  "devDependencies": {
+    "jest": "^29.6.1"
   }
 }

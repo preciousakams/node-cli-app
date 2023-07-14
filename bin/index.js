@@ -4,6 +4,8 @@ import inquirer from "inquirer";
 import * as fs from'fs';
 import * as d3 from 'd3';
 
+const csvSort = () => {
+
 inquirer
   .prompt([
     {
@@ -37,3 +39,6 @@ inquirer
       );
 
   });
+};
+
+csvSort();
