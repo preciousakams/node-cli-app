@@ -27,14 +27,7 @@ inquirer
     // console.log(`${answers["name"]}`);
     const file = answers["name"];
     const newFileLocation = answers["newFileLocation"];
-      fs.copyFile(file, `./file.csv`, (err) => {
-        if (err) {
-          throw err;
-        } 
-        else {
-          console.log('file was copied to destination');
-        }
-    
+      
       const data= d3.csvParseRows(fs.readFileSync(file, 'utf8'))
       const flatRollup = d3.flatRollup(data, v => d3.sum(v, d =>  d[2]).toFixed(2), d => d[0], d => d[1])
       const newCsvFile = d3.csvFormatBody(flatRollup);
@@ -52,7 +45,7 @@ inquirer
 
 
   });
-});
+// });
 //   const boxenOptions = {
 //     padding: 1,
 //     margin: 1,
