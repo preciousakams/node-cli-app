@@ -24,7 +24,7 @@ inquirer
       fs.copyFile(file, `./file.csv`, (err) => {
         if (err) {
           throw err;
-        }
+        } 
         else {
           console.log('file was copied to destination');
         }
