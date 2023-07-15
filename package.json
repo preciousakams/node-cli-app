@@ -4,7 +4,7 @@
   "description": "",
   "main": "bin/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"  
   },
   "bin": {
     "csv": "./bin/index.js"
@@ -18,5 +18,9 @@
   },
   "devDependencies": {
     "jest": "^29.6.1"
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-node",
+    "transform": {}
   }
 }

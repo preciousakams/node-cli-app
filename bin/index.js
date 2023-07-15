@@ -4,7 +4,7 @@ import inquirer from "inquirer";
 import * as fs from'fs';
 import * as d3 from 'd3';
 
-const csvSort = () => {
+export function csvSort() {
 
 inquirer
   .prompt([
@@ -38,7 +38,15 @@ inquirer
       }
       );
 
-  });
+  })
+  .catch(error => {
+    if(error.isTtyError) {
+      console.log("Prompt couldn't be rendered in the current environment");
+    } else {
+      console.log("Something else went wrong");
+    }
+  }
+  );
 };
 
 csvSort();
