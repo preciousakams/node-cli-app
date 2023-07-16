@@ -4,7 +4,7 @@ import inquirer from "inquirer";
 import * as fs from'fs';
 import * as d3 from 'd3';
 
-export function csvSort() {
+export default function csvSort() {
 
 inquirer
   .prompt([
@@ -23,12 +23,15 @@ inquirer
   
     const file = answers["name"];
     const newFileLocation = answers["newFileLocation"];
+    const date = new Date();
+    const time = date.getTime();
+    const newFileName = `SortedFile-${time}.csv`;
       
       const data= d3.csvParseRows(fs.readFileSync(file, 'utf8'))
       const flatRollup = d3.flatRollup(data, v => d3.sum(v, d =>  d[2]).toFixed(2), d => d[0], d => d[1])
       const newCsvFile = d3.csvFormatBody(flatRollup);
     
-      fs.writeFile(`${newFileLocation}/newSortedFile.csv`, newCsvFile, (err) => {
+      fs.writeFile(`${newFileLocation}/${newFileName}`, newCsvFile, (err) => {
         if (err) {
           throw err;
         } 
@@ -43,10 +46,14 @@ inquirer
     if(error.isTtyError) {
       console.log("Prompt couldn't be rendered in the current environment");
     } else {
-      console.log("Something else went wrong");
+      // console.log("Something else went wrong");
+      console.log(error);
     }
   }
   );
 };
-
 csvSort();
+
+
+
+
