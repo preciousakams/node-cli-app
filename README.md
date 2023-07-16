@@ -10,8 +10,9 @@
 > ![CSV file to be sorted](<Medic take-home exercise - Google Chrome 7_16_2023 5_14_07 PM.png>)
 
 ### Sorted CSV file
-![Sorted CSV file](<Medic take-home exercise - Google Chrome 7_16_2023 5_14_07 PM-1.png>)
-## Built With
+> ![Sorted CSV File](<Medic take-home exercise - Google Chrome 7_16_2023 5_18_35 PM.png>)
+
+> # Built With
 * Node.js
 * Inquirer.js
 * D3.js
