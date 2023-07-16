@@ -1,13 +1,9 @@
 import inquirer from "inquirer";
 import fs from 'fs';
 import csvSort from './bin/index.js';
-
 import { afterAll, jest } from '@jest/globals';
 
-
 jest.mock('fs');
-jest.mock('d3')
-
 
 describe('csvSort', () => {
   

@@ -46,8 +46,7 @@ inquirer
     if(error.isTtyError) {
       console.log("Prompt couldn't be rendered in the current environment");
     } else {
-      // console.log("Something else went wrong");
-      console.log(error);
+        console.log(error);
     }
   }
   );
